@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Science Diagram Maker</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- Saved results embedded by FastAPI -->
+    <script id="initial-results" type="application/json">__INITIAL_RESULTS__</script>
+
+    <!-- JavaScript -->
+    <script src="/static/script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>Science Diagram Maker</h1>
+            <p>AI-powered animated educational diagrams</p>
+        </div>
+
+        <span class="status online">Saved results loaded</span>
+    </header>
+
+    <main class="container">
+
+        <!-- Dashboard statistics -->
+        <section class="overview">
+
+            <div class="stat-card">
+                <span>Diagrams generated</span>
+                <strong id="totalCount">0 / 5</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Validation passed</span>
+                <strong id="passedCount">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Total estimated cost</span>
+                <strong id="totalCost">$0.000000</strong>
+            </div>
+
+        </section>
+
+        <!-- Results heading -->
+        <section class="section-heading">
+
+            <div>
+                <h2>Generated science diagrams</h2>
+                <p>
+                    Review, validate and approve or reject
+                    each AI-generated diagram.
+                </p>
+            </div>
+
+            <button class="secondary-btn" id="refreshBtn">
+                Refresh results
+            </button>
+
+        </section>
+
+        <!-- Messages -->
+        <div id="message" class="message" hidden></div>
+
+        <!-- Five-row assignment results table -->
+        <div class="table-wrapper">
+
+            <table class="results-table">
+
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Concept</th>
+                        <th>Animated diagram</th>
+                        <th>Validation checks</th>
+                        <th>Model and usage</th>
+                        <th>Review</th>
+                    </tr>
+                </thead>
+
+                <tbody id="resultsBody">
+                    <tr>
+                        <td colspan="6">Loading saved results...</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+    <footer>
+        Science Diagram Maker · Built with FastAPI and Gemini
+    </footer>
+
+</body>
+</html>
